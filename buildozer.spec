@@ -5,9 +5,9 @@ package.domain = org.veer
 source.dir = .
 source.include_exts = py,png,jpg,kv,atlas
 version = 0.1
-requirements = python3,kivy==2.2.1,requests,urllib3
+osx.kivy_version = 2.2.1
+requirements = hostpython3,python3,kivy==2.2.1,requests,urllib3
 orientation = portrait
-osx.kivy_version = 2.0.0
 fullscreen = 0
 android.permissions = INTERNET
 android.api = 33

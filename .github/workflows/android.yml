@@ -40,7 +40,6 @@ jobs:
           gstreamer1.0-plugins-bad \
           gstreamer1.0-plugins-ugly \
           gstreamer1.0-libav \
-          libgstreamer-gl1.0-dev \
           openjdk-17-jdk \
           unzip \
           zip \
@@ -65,4 +64,4 @@ jobs:
       with:
         name: smc-trading-apk
         path: bin/*.apk
-        
+

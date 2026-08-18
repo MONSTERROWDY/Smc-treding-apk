@@ -17,38 +17,24 @@ jobs:
       with:
         python-version: '3.10'
 
-    - name: Install Dependencies
+    - name: Install System Dependencies
       run: |
-        sudo dpkg --add-architecture i386
         sudo apt-get update
         sudo apt-get install -y \
-          build-essential \
+          python3-pip \
+          python3-setuptools \
+          python3-wheel \
           git \
-          ffmpeg \
-          libsdl2-dev \
-          libsdl2-image-dev \
-          libsdl2-mixer-dev \
-          libsdl2-ttf-dev \
-          libportmidi-dev \
-          libswscale-dev \
-          libavformat-dev \
-          libavcodec-dev \
-          zlib1g-dev \
-          libgstreamer1.0-dev \
-          gstreamer1.0-plugins-base \
-          gstreamer1.0-plugins-good \
-          gstreamer1.0-plugins-bad \
-          gstreamer1.0-plugins-ugly \
-          gstreamer1.0-libav \
-          openjdk-17-jdk \
-          unzip \
           zip \
+          unzip \
+          openjdk-17-jdk \
           autoconf \
           libtool \
           pkg-config \
+          zlib1g-dev \
+          libncurses5 \
           libncurses5:i386 \
-          libstdc++6:i386 \
-          zlib1g:i386
+          libstdc++6:i386
 
     - name: Upgrade Pip and Install Buildozer
       run: |
@@ -64,4 +50,3 @@ jobs:
       with:
         name: smc-trading-apk
         path: bin/*.apk
-
